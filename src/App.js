@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import RecipeCreate from "./RecipeCreate";
+import RecipeList from "./RecipeList";
+import RecipeData from "./RecipeData";
+import RecipeView from "./RecipeView";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [recipes, setRecipes] = useState(RecipeData);
+
+	// function to delete existing recipe
+	const deleteRecipe = (indexToDelete) =>
+		setRecipes((recipes) =>
+			recipes.filter((post, index) => index !== indexToDelete)
+		);
+
+	// function to add a new recipe
+	const createRecipe = (newRecipe) =>
+		setRecipes((recipes) => [...recipes, newRecipe]);
+
+	return (
+		<div className="App">
+			<header>
+				<h1>Delicious Food Recipes</h1>
+			</header>
+			<RecipeList recipes={recipes} deleteRecipe={deleteRecipe} />
+			<br></br>
+			<br></br>
+			<div className="AddNew">
+				<h2>Add a New Recipe</h2>
+			</div>
+			<RecipeCreate createRecipe={createRecipe} />
+		</div>
+	);
 }
 
 export default App;

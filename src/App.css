@@ -1,38 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+body {
+	background-color: #15202b;
+	color: white;
+}
 .App {
-  text-align: center;
+	padding: 1em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+	display: inline-block;
+	width: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+	font-size: 18px;
+	border-radius: 15px;
+	padding: 5px 15px;
+	background-color: #c4daf5;
+	font-family: "Righteous";
+}
+header {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+	font: 64px "Righteous", sans-serif;
+	text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+	width: 150px;
+	height: auto;
+	object-fit: scale-down;
+	border-radius: 15px;
+	box-shadow: 5px 5px 8px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AddNew {
+	margin-left: 250px;
+}
+/* zebra striping */
+
+tbody tr:nth-child(odd) {
+	background-color: #2e4561;
+}
+
+/* typography */
+
+html {
+	font-family: "Manrope", sans-serif;
+}
+
+thead th,
+tfoot th {
+	font-family: "Righteous";
+	font-size: 18px;
+}
+
+th {
+	letter-spacing: 2px;
+	padding: 10px;
+}
+
+td {
+	letter-spacing: 1px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-size: 14px;
+	padding: 10px;
+	text-align: center;
+}
+
+/* spacing */
+
+table {
+	/* table-layout: fixed; */
+
+	width: 75%;
+	margin: auto;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 10px 5px 15px rgba(0, 0, 0, 10.1);
+	background-color: #1f3347;
+}
+
+.content_td p {
+	max-width: 100%;
+	max-height: 100px;
+	overflow-y: auto;
+	text-overflow: ellipsis;
+}
+
+/* Column Size for thead */
+
+thead th:nth-child(1) {
+	width: 10%;
+}
+
+thead th:nth-child(2) {
+	width: 10%;
+}
+
+thead th:nth-child(3) {
+	width: 10%;
+}
+
+thead th:nth-child(4) {
+	width: 30%;
+}
+
+thead th:nth-child(5) {
+	width: 30%;
+}
+
+thead th:nth-child(6) {
+	width: 10%;
+}
+
+/* Column size for tbody */
+
+tbody td:nth-child(1) {
+	width: 10%;
+}
+
+tbody td:nth-child(2) {
+	width: 10%;
+}
+
+tbody td:nth-child(3) {
+	width: 10%;
+}
+
+tbody td:nth-child(4) {
+	width: 30%;
+}
+
+tbody td:nth-child(5) {
+	width: 30%;
+}
+
+tbody td:nth-child(6) {
+	width: 10%;
 }
